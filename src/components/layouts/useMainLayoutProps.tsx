@@ -10,7 +10,7 @@ const useDefaultLayoutProps = () => {
   const settings: ProSettings | undefined = {
     fixSiderbar: true,
     layout: 'mix',
-    // title: false,
+    splitMenus: true,
   };
   const props = {
     title: '',
