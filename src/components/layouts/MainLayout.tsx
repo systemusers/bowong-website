@@ -36,8 +36,7 @@ export default function MainLayout({ children, params: { locale } }: Props) {
             <ProLayout
               prefixCls="my-prefix"
               {...props}
-              siderWidth={216}
-
+              siderWidth={200}
               // location={{
               //   pathname,
               // }}
@@ -49,11 +48,14 @@ export default function MainLayout({ children, params: { locale } }: Props) {
                 pageContainer:{
                   paddingBlockPageContainerContent: 0,
                   paddingInlinePageContainerContent:0,
-                }
+                },
+                // sider:{
+                //   colorMenuBackground:' rgba(0,0,0,0.1)',
+                // }
               }}
               siderMenuType="group"  // 菜单类型
               menu={{
-                collapsedShowGroupTitle: true,    
+                collapsedShowGroupTitle: true,
               }}
               // headerTitleRender={(logo, title, _) => {
               //   // const defaultDom = (
@@ -94,8 +96,7 @@ export default function MainLayout({ children, params: { locale } }: Props) {
                 color: '#333', // 设置默认字体颜色
               }}
             >
-              <PageContainer 
-              >
+              <PageContainer>
                 {children}
               </PageContainer>
             </ProLayout>
@@ -104,6 +105,5 @@ export default function MainLayout({ children, params: { locale } }: Props) {
       </AntdStyledComponentsRegistry>
     </NextIntlClientProvider>
   )
-    
 }
 
