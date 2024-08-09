@@ -11,9 +11,9 @@ export default function Page() {
       <div className={`${styles['miao_image']}`}>
         <img src="/home/miao.png" width={'100%'} alt="" />
         <div className={`${styles['title']}`}>
-          <div style={{ fontSize: '7.5vw', lineHeight: '7vw' }}>BOWONG</div>
-          <div className={`${styles['title_boder']}`} />
-          <div style={{ marginTop: '3vw', fontSize: '1vw', lineHeight: '1.5vw', letterSpacing: '0.5vw' }}>
+            <div style={{ fontSize: '7.5vw', lineHeight: '7vw' }}>BOWONG</div>
+            <div className={`${styles['title_boder']}`} />
+          <div style={{ marginTop: '3vw', fontSize: '1vw', lineHeight: '2vw', letterSpacing: '0.1vw' }}>
             <div>{t('head1')}</div>
             <div>{t('head2')}</div>
           </div>

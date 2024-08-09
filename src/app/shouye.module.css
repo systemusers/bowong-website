@@ -1349,11 +1349,13 @@
   text-align: center; /* 文字居中 */
   /* font-size: 0.5vw; */
   font-family: AlibabaPuHuiTiRegular;
+  width: 30%;
   color: #333333;
 }
 .title_boder{
-  width: 53%; /* 色块的宽度 */
-  height: 1vw; /* 色块的高度，可以根据需要调整 */
+  margin-left: 0.5vw;
+  width: 55%; /* 色块的宽度 */
+  height: 0.6vw; /* 色块的高度，可以根据需要调整 */
   border-radius: 0.5vw;
   background: linear-gradient(135deg, rgba(60, 174, 224, 1) 0%, rgba(194, 61, 245, 1) 100%); /* 设置渐变背景 */
 }
