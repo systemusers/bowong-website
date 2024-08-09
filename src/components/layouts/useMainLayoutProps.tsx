@@ -15,8 +15,6 @@ const useDefaultLayoutProps = () => {
   const props = {
     title: '',
     logo: false,
-    // pure: true,
-    
     location: {
       pathname: staticRouter.root,
     },

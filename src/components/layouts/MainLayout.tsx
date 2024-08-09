@@ -36,6 +36,8 @@ export default function MainLayout({ children, params: { locale } }: Props) {
             <ProLayout
               prefixCls="my-prefix"
               {...props}
+              siderWidth={216}
+
               // location={{
               //   pathname,
               // }}
@@ -49,26 +51,21 @@ export default function MainLayout({ children, params: { locale } }: Props) {
                   paddingInlinePageContainerContent:0,
                 }
               }}
-              siderMenuType="group"
+              siderMenuType="group"  // 菜单类型
               menu={{
-                collapsedShowGroupTitle: true,
+                collapsedShowGroupTitle: true,    
               }}
-              // headerTitleRender={(logo, title, _) => {
-              //   // const defaultDom = (
-              //   //   <a>
-              //   //     {logo}
-              //   //   </a>
-              //   // );
-              //   return (
-              //     <>
-              //       <MenuCard />
-              //     </>
-              //   );
-              // }}
-              footerRender={(props) => {
-                if (props?.collapsed) return undefined;
+              headerTitleRender={(logo, title, _) => {
+                // const defaultDom = (
+                //   <a>
+                //     {logo}
+                //   </a>
+                // );
                 return (
-                  <FooterLayout/>
+                  <>
+                    {/* <MenuCard /> */}
+                          wwww
+                  </>
                 );
               }}
               actionsRender={(props) => {
@@ -76,6 +73,12 @@ export default function MainLayout({ children, params: { locale } }: Props) {
                 return [
                   <ChangeLanguage key="ChangeLanguage"></ChangeLanguage>,
                 ];
+              }}
+              footerRender={(props) => {
+                if (props?.collapsed) return undefined;
+                return (
+                  <FooterLayout/>
+                );
               }}
               {...settings}
               menuItemRender={(item: any) => {
