@@ -86,6 +86,13 @@ export default function MainLayout({ children, params: { locale } }: Props) {
                   }}></Navigation>
                 );
               }}
+              contentStyle={{
+                // padding: '16px', // 给内容区域添加内边距
+                marginTop: '-64px',
+                backgroundColor: '#f0f2f5', // 设置背景颜色
+                minHeight: 'calc(100vh - 64px)', // 设置最小高度，排除 header 的高度
+                color: '#333', // 设置默认字体颜色
+              }}
             >
               <PageContainer 
                 style={{

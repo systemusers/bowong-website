@@ -8,14 +8,15 @@ const useDefaultLayoutProps = () => {
   const canAccessSystem = useAccessStore((state) => state.canAccessSystem);
   // 设置
   const settings: ProSettings | undefined = {
-    fixSiderbar: true,
-    layout: 'mix',
-    splitMenus: true,
+    fixedHeader: true,  // 固定侧边栏
+    layout: 'top',
+    splitMenus: true,  // 是否分割菜单
   };
   const props = {
     title: '',
-    siderWidth: 216,
     logo: false,
+    // pure: true,
+    
     location: {
       pathname: staticRouter.root,
     },
