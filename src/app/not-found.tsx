@@ -1,5 +1,6 @@
 import styles from './shouye.module.css';
-
+import Image from 'next/image';
+import image from '@/../public/image.png';
 export default function NotFound() {
   return (
     <div
@@ -12,7 +13,7 @@ export default function NotFound() {
       }}
     >
       <div className={`${styles['text_404']}`}>
-          <img src="/image.png" alt="" />
+          <Image src={image} alt="" />
         <div
           style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '3vw', marginTop: '5vh' }}
         >
