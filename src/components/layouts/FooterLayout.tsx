@@ -3,7 +3,8 @@
 import React, { useState } from 'react';
 
 import { message } from 'antd';
-
+import Image from 'next/image';
+import email1 from '@/../public/e-mail.png';
 import styles from '@/app/shouye.module.css';
 export default function FooterLayout() {
   const [contactPerson, setContactPerson] = useState('');
@@ -62,20 +63,9 @@ export default function FooterLayout() {
             若您遇到任何疑问或需要进一步的信息，您可以选择直接拨打我们的官方服务热线进行即时沟通，我们亦提供了在线留言功能。您只需在本页面右侧的反馈表单中详述您的问题或需求，我们的专业团队将在收到您的信息后，依据留言的时间顺序，尽快予以响应并提供针对性的解答。
           </div> */}
           <div style={{ fontSize: '1vw', color: 'rgba(51, 51, 51, 1)', paddingRight: '5vw' }}>
-            <div className="flex justify-items-center">
-              <img src="/phone.png" alt="" className={`${styles['size-6']}`} />
-              &nbsp;&nbsp;<span style={{ fontSize: '1vw' }}>(201)555-0124</span>
-            </div>
             <div className="flex justify-items-center" style={{ margin: '2vw 0' }}>
-              <img src="/e-mail.png" alt="" className={`${styles['size-6']}`} />
-              &nbsp;&nbsp;<span style={{ fontSize: '1vw' }}>bowong.studio@example.com</span>
-            </div>
-            <div className="flex justify-items-center">
-              <img src="/gps.png" alt="" className={`${styles['size-6']}`} />
-              &nbsp;&nbsp;
-              <span style={{ fontSize: '1vw' }}>
-                浙江省杭州市余杭区五常街道爱橙街1号10幢2单元4层E409室E409-1至E409-15
-              </span>
+             <Image src={email1} alt="" className={`${styles['size-6']}`} />
+              &nbsp;&nbsp;<span style={{ fontSize: '1vw' }}>HR@bowong.ai</span>
             </div>
           </div>
         </div>
@@ -124,10 +114,10 @@ export default function FooterLayout() {
       <div>
         <div className={`${styles['footer_contact_1']}`}>
           <span>Follow Us</span>
-          <img src="/WeChat.png" alt="" className={`${styles['size-8']}`} />
-          <img src="/MicroBlog.png" alt="" className={`${styles['size-8']}`} />
-          <img src="/RedBook.png" alt="" className={`${styles['size-8']}`} />
-          <img src="/Tubing.png" alt="" className={`${styles['size-8']}`} />
+         {/* <Image src="/WeChat.png" alt="" className={`${styles['size-8']}`} />
+         <Image src="/MicroBlog.png" alt="" className={`${styles['size-8']}`} />
+         <Image src="/RedBook.png" alt="" className={`${styles['size-8']}`} />
+         <Image src="/Tubing.png" alt="" className={`${styles['size-8']}`} /> */}
         </div>
         <div className={`${styles['footer_contact_2']}`}>
           <div>
