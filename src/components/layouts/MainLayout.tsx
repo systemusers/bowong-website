@@ -69,13 +69,11 @@ export default function MainLayout({ children, params: { locale } }: Props) {
               //   );
               // }}
               actionsRender={(props) => {
-                if (props.isMobile) return [];
                 return [
                   <ChangeLanguage key="ChangeLanguage"></ChangeLanguage>,
                 ];
               }}
               footerRender={(props) => {
-                if (props?.collapsed) return undefined;
                 return (
                   <FooterLayout/>
                 );
