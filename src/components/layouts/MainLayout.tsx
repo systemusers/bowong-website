@@ -48,27 +48,11 @@ export default function MainLayout({ children, params: { locale } }: Props) {
                   paddingBlockPageContainerContent: 0,
                   paddingInlinePageContainerContent:0,
                 },
-                // sider:{
-                //   colorMenuBackground:' rgba(0,0,0,0.1)',
-                // }
               }}
               siderMenuType="group"  // 菜单类型
               menu={{
                 collapsedShowGroupTitle: true,
               }}
-              // headerTitleRender={(logo, title, _) => {
-              //   // const defaultDom = (
-              //   //   <a>
-              //   //     {logo}
-              //   //   </a>
-              //   // );
-              //   return (
-              //     <>
-              //       <MenuCard />
-              //             wwww
-              //     </>
-              //   );
-              // }}
               actionsRender={(props) => {
                 return [
                   <ChangeLanguage key="ChangeLanguage"></ChangeLanguage>,

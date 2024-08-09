@@ -11,8 +11,7 @@ interface SettingState {
 const useSettingStore = create<SettingState>()(
   persist(
     (set, get) => ({
-      defaultLocale: get()?.defaultLocale ? get()?.defaultLocale : defaultLocale,  // 
-      // defaultLocale, 
+      defaultLocale: get()?.defaultLocale ?  'en':get()?.defaultLocale,  
       locales: locales,
       setDefaultLocale: (newVal) => set((state: any) => ({
         defaultLocale: state.defaultLocale = newVal,
