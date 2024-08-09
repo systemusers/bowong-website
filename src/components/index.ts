@@ -3,6 +3,7 @@
 //* LAYOUT COMPONENTS
 export { default as MainLayout } from './layouts/MainLayout';
 export { default as EmptyLayout } from './layouts/EmptyLayout';
+export { default as FooterLayout } from './layouts/FooterLayout';
 export { default as RootLayout } from './layouts/RootLayout';
 
 // OTHERS

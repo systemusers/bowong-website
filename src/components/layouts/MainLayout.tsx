@@ -9,7 +9,7 @@ import { NextIntlClientProvider } from 'next-intl';
 import useMainLayoutProps from '@/components/layouts/useMainLayoutProps';
 import { staticRouter } from '@/static/staticRouter';
 import { timeZone } from '@/static/locales';
-import { ChangeLanguage, MockComponent, Navigation, NoSSR } from '@/components';
+import { ChangeLanguage, MockComponent, Navigation, NoSSR, FooterLayout } from '@/components';
 import { en } from '@/i18n/en';
 import { zh } from '@/i18n/zh';
 import { PageContainer, ProLayout,} from '@ant-design/pro-components';
@@ -65,20 +65,12 @@ export default function MainLayout({ children, params: { locale } }: Props) {
               //     </>
               //   );
               // }}
-              // menuFooterRender={(props) => {
-              //   if (props?.collapsed) return undefined;
-              //   return (
-              //     <div
-              //       style={{
-              //         textAlign: 'center',
-              //         paddingBlockStart: 12,
-              //       }}
-              //     >
-              //       <div>© 2021 Made with love</div>
-              //       <div>by Ant Design</div>
-              //     </div>
-              //   );
-              // }}
+              footerRender={(props) => {
+                if (props?.collapsed) return undefined;
+                return (
+                  <FooterLayout/>
+                );
+              }}
               actionsRender={(props) => {
                 if (props.isMobile) return [];
                 return [
