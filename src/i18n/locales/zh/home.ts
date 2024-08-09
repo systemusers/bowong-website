@@ -1,6 +1,6 @@
 export const home = {
-    head1: '基于AI的新电商',
-    head2: '构建AI形态的内容+渠道',
+    head1:'基于AI的新电商',
+    head2:'构建AI形态的内容+渠道',
     /**产品 */
     product1: '博望出海内容模型',
     product2: '博望斗彩图片大模型',

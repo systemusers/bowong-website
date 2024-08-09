@@ -1,8 +1,11 @@
 'use client';
 
 import styles from '@/app/shouye.module.css';
+import { useTranslations } from 'next-intl';
 
 export default function Page() {
+  const t = useTranslations('home');
+
   return (
     <div>
       <div className={`${styles['miao_image']}`}>
@@ -11,8 +14,8 @@ export default function Page() {
           <div style={{ fontSize: '7.5vw', lineHeight: '7vw' }}>BOWONG</div>
           <div className={`${styles['title_boder']}`} />
           <div style={{ marginTop: '3vw', fontSize: '1vw', lineHeight: '1.5vw', letterSpacing: '0.5vw' }}>
-            <div>基于AI的新电商</div>
-            <div>构建AI形态的内容+渠道</div>
+            <div>{t('head1')}</div>
+            <div>{t('head2')}</div>
           </div>
         </div>
       </div>

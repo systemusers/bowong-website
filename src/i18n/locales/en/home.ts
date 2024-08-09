@@ -1,6 +1,6 @@
 export const home = {
-    head1: 'Build up new AI online marketplace',
-    head2: 'Base on full-automatic director & media AI system，support unlimited content & UGC channel martix',
+    head1:'Build up new AI online marketplace',
+    head2:'Base on full-automatic director & media AI system，support unlimited content & UGC channel martix',
 
     /**产品 */
     product1: '博望出海内容模型',
