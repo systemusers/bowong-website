@@ -58,11 +58,11 @@ export default function MainLayout({ children, params: { locale } }: Props) {
                   <ChangeLanguage key="ChangeLanguage"></ChangeLanguage>,
                 ];
               }}
-              footerRender={(props) => {
-                return (
-                  <FooterLayout/>
-                );
-              }}
+              // footerRender={(props) => {
+              //   return (
+              //     <FooterLayout/>
+              //   );
+              // }}
               {...settings}
               menuItemRender={(item: any) => {
                 return (
