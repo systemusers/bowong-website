@@ -15,21 +15,10 @@
         --background-end-rgb: 0, 0, 0;
     }
 }
-
-body {
-    color: rgb(var(--foreground-rgb));
-    background: linear-gradient(
-            to bottom,
-            transparent,
-            rgb(var(--background-end-rgb))
-    ) rgb(var(--background-start-rgb));
+#root {
+  width: 100vw;
+  height: 100vh;
+  padding: 0;
+  margin: 0;
+  font-family: AlibabaPuHuiTi;  
 }
-@media (max-width: 768px) {
-    .my-prefix .ant-menu-item {
-      background-color: transparent !important; /* 设置背景透明 */
-    }
-    
-    .my-prefix .ant-menu-item:hover {
-      background-color: rgba(255, 255, 255, 0.1); /* 悬停时可以添加轻微的背景色 */
-    }
-  }
