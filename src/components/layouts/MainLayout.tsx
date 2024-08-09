@@ -55,19 +55,19 @@ export default function MainLayout({ children, params: { locale } }: Props) {
               menu={{
                 collapsedShowGroupTitle: true,    
               }}
-              headerTitleRender={(logo, title, _) => {
-                // const defaultDom = (
-                //   <a>
-                //     {logo}
-                //   </a>
-                // );
-                return (
-                  <>
-                    {/* <MenuCard /> */}
-                          wwww
-                  </>
-                );
-              }}
+              // headerTitleRender={(logo, title, _) => {
+              //   // const defaultDom = (
+              //   //   <a>
+              //   //     {logo}
+              //   //   </a>
+              //   // );
+              //   return (
+              //     <>
+              //       <MenuCard />
+              //             wwww
+              //     </>
+              //   );
+              // }}
               actionsRender={(props) => {
                 if (props.isMobile) return [];
                 return [
