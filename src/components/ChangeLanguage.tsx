@@ -6,8 +6,10 @@ import { RadioChangeEvent } from 'antd';
 
 export default function ChangeLanguage() {
   const options = [
-    { label: 'EN', value: 'en' },
-    { label: '中', value: 'zh' },
+    { label: <div style={{color:'#fff'}} >EN</div>, 
+      value: 'en' },
+    { label: <div style={{color:'#fff'}} >中</div>, 
+      value: 'zh' },
   ];
   const intlPathname = useIntlPathname();
   const intlRouter = useIntlRouter();

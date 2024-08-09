@@ -42,7 +42,7 @@ export default function MainLayout({ children, params: { locale } }: Props) {
               token={{
                 header: {
                   colorBgHeader:' rgba(0,0,0,0.2)',
-                  colorTextMenu: 'rgba(0,0,0,0.85)',
+                  colorTextMenu: '#fff',
                 },
                 pageContainer:{
                   paddingBlockPageContainerContent: 0,
@@ -87,17 +87,13 @@ export default function MainLayout({ children, params: { locale } }: Props) {
                 );
               }}
               contentStyle={{
-                // padding: '16px', // 给内容区域添加内边距
-                marginTop: '-64px',
-                backgroundColor: '#f0f2f5', // 设置背景颜色
+                marginTop: '-50px',
+                backgroundColor: '#fafafa', // 设置背景颜色
                 minHeight: 'calc(100vh - 64px)', // 设置最小高度，排除 header 的高度
                 color: '#333', // 设置默认字体颜色
               }}
             >
               <PageContainer 
-                style={{
-                  backgroundColor: '#fafafa'
-                }}
               >
                 {children}
               </PageContainer>
