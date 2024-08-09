@@ -9,8 +9,7 @@
     "lint": "next lint",
     "prettier": "prettier --write .",
     "prepare": "husky install",
-    "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0",
-    "preinstall": "npx only-allow pnpm"
+    "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0"
   },
   "dependencies": {
     "-": "^0.0.1",
