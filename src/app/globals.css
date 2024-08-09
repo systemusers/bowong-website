@@ -24,3 +24,6 @@ body {
             rgb(var(--background-end-rgb))
     ) rgb(var(--background-start-rgb));
 }
+.ant-page-header-no-children{
+    height: 0;
+}

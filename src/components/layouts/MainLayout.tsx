@@ -12,21 +12,7 @@ import { timeZone } from '@/static/locales';
 import { ChangeLanguage, MockComponent, Navigation, NoSSR } from '@/components';
 import { en } from '@/i18n/en';
 import { zh } from '@/i18n/zh';
-import { PageContainer, ProCard, ProLayout,SettingDrawer} from '@ant-design/pro-components';
-
-// const MenuCard = () => {
-//   const { token } = theme.useToken();
-//   return (
-//     <div
-//       style={{
-//         display: 'flex',
-//         alignItems: 'center',
-//       }}
-//     >logo
-//     </div>
-//   );
-// };
-
+import { PageContainer, ProLayout,} from '@ant-design/pro-components';
 export default function MainLayout({ children, params: { locale } }: Props) {
   useEffect(() => {
   }, []);
@@ -55,8 +41,13 @@ export default function MainLayout({ children, params: { locale } }: Props) {
               // }}
               token={{
                 header: {
-                  colorBgMenuItemSelected: 'rgba(0,0,0,0.04)',
+                  colorBgHeader:' rgba(0,0,0,0.2)',
+                  colorTextMenu: 'rgba(0,0,0,0.85)',
                 },
+                pageContainer:{
+                  paddingBlockPageContainerContent: 0,
+                  paddingInlinePageContainerContent:0,
+                }
               }}
               siderMenuType="group"
               menu={{
@@ -88,8 +79,6 @@ export default function MainLayout({ children, params: { locale } }: Props) {
               //     </div>
               //   );
               // }}
-
-              // onMenuHeaderClick={(e) => console.log(e)}
               actionsRender={(props) => {
                 if (props.isMobile) return [];
                 return [
@@ -106,7 +95,11 @@ export default function MainLayout({ children, params: { locale } }: Props) {
                 );
               }}
             >
-              <PageContainer>
+              <PageContainer 
+                style={{
+                  backgroundColor: '#fafafa'
+                }}
+              >
                 {children}
               </PageContainer>
             </ProLayout>
@@ -115,5 +108,6 @@ export default function MainLayout({ children, params: { locale } }: Props) {
       </AntdStyledComponentsRegistry>
     </NextIntlClientProvider>
   )
-    ;
+    
 }
+

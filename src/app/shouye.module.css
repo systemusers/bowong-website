@@ -1355,7 +1355,7 @@
 }
 .miao_image {
   position: relative; /* 设置为相对定位，以便内部元素使用绝对定位 */
-  width: 100%; /* 保持原宽度 */
+  /* width: 100%; 保持原宽度 */
 }
 .title{
   position: absolute; /* 使用绝对定位 */
