@@ -227,14 +227,6 @@
   left: 0.11vw;
   bottom: 0.21vw;
 }
-.section_3 {
-  padding: 7.5vw 1.63vw 3vw 2.25vw;
-  background-image: url('/home/huaban1.png');
-  background-size: cover; /* 使用 cover 来确保背景图覆盖整个容器 */
-  background-repeat: no-repeat;
-  width:33%;
-  height: 698px;
-}
 .pos_2 {
   position: absolute;
   right: 0;
@@ -1133,14 +1125,6 @@
 }
 .group_3.1{
  padding: 10%;
-}
-.left_1{
-  width: 30%;
-  height: 100%;
-  background-image: url('/home/beij2.png');
-  background-size: cover;
-  background-position: bottom;
-  background-repeat: no-repeat;
 }
 .right_1{
   width: 70%;

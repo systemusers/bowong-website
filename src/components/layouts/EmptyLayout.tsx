@@ -4,13 +4,11 @@ import React from 'react';
 import { NextIntlClientProvider } from 'next-intl';
 import { Props } from '@/types/Layout';
 import { timeZone } from '@/static/locales';
-import { MockComponent } from '@/components';
 import { en } from '@/i18n/en';
 import { zh } from '@/i18n/zh';
 
-export const metadata: { title: string, description: string } = {
-  title: '',
-  description: '',
+export const metadata: { title: string} = {
+  title: '官网',
 };
 
 export default function EmptyLayout({ children, params: { locale } }: Props) {
@@ -18,7 +16,6 @@ export default function EmptyLayout({ children, params: { locale } }: Props) {
   return (
     <NextIntlClientProvider locale={locale} messages={messages} timeZone={timeZone}>
       <AntdStyledComponentsRegistry>
-        <MockComponent></MockComponent>
         {children}
       </AntdStyledComponentsRegistry>
     </NextIntlClientProvider>

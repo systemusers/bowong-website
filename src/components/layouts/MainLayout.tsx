@@ -9,7 +9,7 @@ import { NextIntlClientProvider } from 'next-intl';
 import useMainLayoutProps from '@/components/layouts/useMainLayoutProps';
 import { staticRouter } from '@/static/staticRouter';
 import { timeZone } from '@/static/locales';
-import { ChangeLanguage, MockComponent, Navigation, NoSSR, FooterLayout } from '@/components';
+import { ChangeLanguage, Navigation, NoSSR, FooterLayout } from '@/components';
 import { en } from '@/i18n/en';
 import { zh } from '@/i18n/zh';
 import { PageContainer, ProLayout,} from '@ant-design/pro-components';
@@ -27,7 +27,6 @@ export default function MainLayout({ children, params: { locale } }: Props) {
   return (
     <NextIntlClientProvider locale={locale} messages={messages} timeZone={timeZone}>
       <AntdStyledComponentsRegistry>
-        <MockComponent></MockComponent>
         <NoSSR>
           <div
             id="pro-layout"
