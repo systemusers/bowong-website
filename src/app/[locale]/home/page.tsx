@@ -147,7 +147,7 @@ export default function Page() {
         </div>
       </div>
       <div className={`${styles['titleContainer']}`}>
-          <Image src={hezuo}  style={{ width: '100%' }} alt="" /> 
+          <Image src={hezuo} priority style={{ width: '100%' }} alt="" /> 
         <div className={`${styles['titleWhy']}`}>
           <div style={{ fontSize: '2.5vw', lineHeight: '3vw',  marginBottom: '10vw' }}>{t('WhyChooseUs')}</div>
           <div className={`${styles['teamWhy']} flex justify-between`}>
