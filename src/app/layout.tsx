@@ -9,7 +9,7 @@ export default function Layout({ children }: Props) {
   console.log(process.env.NEXT_PUBLIC_MOCK);
   return (
     <html lang="en">
-      <body className="bg-gray-100">
+      <body>
         {children}
       </body>
     </html>
