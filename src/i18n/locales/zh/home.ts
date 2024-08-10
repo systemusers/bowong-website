@@ -2,15 +2,9 @@ export const home = {
     head1:'基于AI的新电商',
     head2:'构建AI形态的内容+渠道',
     /**产品 */
-<<<<<<< HEAD
     product1: '博望出海 内容模型',
     product2: '博望斗彩 图片大模型',
     product3: '博望短 视频大模型 ',
-=======
-    product1: '博望出海内容模型',
-    product2: '博望斗彩图片大模型',
-    product3: '博望短视频大模型 ',
->>>>>>> 8d48e9ce184134ecb9bb06dffe40b2dfaf18f073
     /**介绍 */
     product1intro1: 'TikTok/亚马逊内容模型，改变传统出海短视频生产和投放模式，以矩阵+AI生产模式快速布局，快速铺货',
     product1intro2: '基于多年设计领域经验，建设面相真产品 + 真场景图文大模型，帮助电商客户快速完成内容生产和多渠道投放',
