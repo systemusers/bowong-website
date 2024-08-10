@@ -12,7 +12,6 @@
     "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0"
   },
   "dependencies": {
-    "-": "^0.0.1",
     "@ant-design/nextjs-registry": "^1.0.0",
     "@ant-design/pro-components": "^2.6.49",
     "@emotion/css": "^11.13.0",
