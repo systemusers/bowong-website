@@ -1,5 +1,4 @@
 'use client';
-
 import styles from '@/app/shouye.module.css';
 import { useTranslations } from 'next-intl';
 import Image from 'next/image';
