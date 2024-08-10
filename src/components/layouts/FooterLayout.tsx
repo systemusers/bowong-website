@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
-// import * as Sentry from "@sentry/browser";
+import * as Sentry from "@sentry/browser";
 
 import { message } from 'antd';
 import Image from 'next/image';
@@ -37,14 +37,14 @@ export default function FooterLayout() {
   };
 
   const sendFeedbackToSentry = (contactPerson: string, email: string, contactNumber: string, company:string) => {
-    // Sentry.captureMessage('User Feedback', {
-    //   extra: {
-    //     contactPerson,
-    //     email,
-    //     contactNumber,
-    //     company,
-    //   },
-    // });
+    Sentry.captureMessage('User Feedback', {
+      extra: {
+        contactPerson,
+        email,
+        contactNumber,
+        company,
+      },
+    });
   };
   const handleSubmit = () => {
     console.log('Contact Person:', contactPerson);
