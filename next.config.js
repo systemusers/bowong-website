@@ -41,7 +41,7 @@ module.exports = withSentryConfig(
 
     org: "sentry",
     project: "javascript-nextjs",
-    sentryUrl: "http://122.51.245.126:9000/",
+    sentryUrl: "http://122.51.245.126:9000",
 
     // Only print logs for uploading source maps in CI
     silent: !process.env.CI,
