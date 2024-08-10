@@ -3,11 +3,11 @@
 import React, { useState } from 'react';
 import * as Sentry from "@sentry/browser";
 
-// import { message } from 'antd';
 import Image from 'next/image';
 import email1 from '@/../public/e-mail.png';
 import styles from '@/app/shouye.module.css';
 import { useTranslations } from 'next-intl';
+
 
 export default function FooterLayout() {
   const [contactPerson, setContactPerson] = useState('');
@@ -39,15 +39,10 @@ export default function FooterLayout() {
   const sendFeedbackToSentry = (contactPerson: string, email: string, contactNumber: string, company:string) => {
     const eventId = Sentry.captureMessage("User Feedback");
     const userFeedback= {
-      name:contactPerson,
+      name:contactPerson + contactNumber,
       email: email,
       message:contactPerson,
       associatedEventId: eventId,
-      // contactPerson,
-      // email,
-      // contactNumber,
-      // company,
-      // associatedEventId: eventId,
     }
     console.log('向Sentry发送反馈:', userFeedback);
     Sentry.captureFeedback(userFeedback);
@@ -62,12 +57,7 @@ export default function FooterLayout() {
       return;
     }
     console.log('提交反馈...');
-    sendFeedbackToSentry(contactPerson, email, contactNumber, company);
-    try {
-      throw new Error('测试Sentry的模拟错误');
-    } catch (error) {
-      Sentry.captureException(error);
-    }
+    sendFeedbackToSentry(contactPerson, email, contactNumber, company)
     // message.success('已发送成功');
     setContactPerson('');
     setEmail('');
