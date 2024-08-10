@@ -12,7 +12,9 @@
 # next.js
 /.next/
 /out/
-
+#lock
+package-lock.json
+yarn.lock
 # production
 /build
 
@@ -37,3 +39,6 @@ next-env.d.ts
 
 .idea
 package-lock.json
+
+# Sentry Config File
+.env.sentry-build-plugin
