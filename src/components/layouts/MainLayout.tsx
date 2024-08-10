@@ -7,7 +7,7 @@ import { usePathname, useRouter } from '@/lib/language';
 import { Props } from '@/types/Layout';
 import { NextIntlClientProvider } from 'next-intl';
 import useMainLayoutProps from '@/components/layouts/useMainLayoutProps';
-import { staticRouter } from '@/static/staticRouter';
+// import { staticRouter } from '@/static/staticRouter';
 import { timeZone } from '@/static/locales';
 import { ChangeLanguage, Navigation, NoSSR, FooterLayout } from '@/components';
 import { en } from '@/i18n/en';
@@ -18,7 +18,7 @@ export default function MainLayout({ children, params: { locale } }: Props) {
   }, []);
   const router = useRouter();
   const currentRoute = usePathname() as string;
-  const [pathname, setPathname] = useState(currentRoute || `${staticRouter.home}`);
+  // const [pathname, setPathname] = useState(currentRoute || `${staticRouter.home}`);
   const [props, 
     settings
   ] = useMainLayoutProps();
@@ -67,7 +67,6 @@ export default function MainLayout({ children, params: { locale } }: Props) {
               menuItemRender={(item: any) => {
                 return (
                   <Navigation name={item.name} onNavCLick={() => {
-                    setPathname(`${item.path || staticRouter.home}`);
                     router.push(`${item.path}`);
                   }}></Navigation>
                 );

@@ -11,7 +11,7 @@ export function generateStaticParams() {
 export default function Layout({ children, params: { locale } }: Props) {
   return (
     <>
-      <MainLayout params={{locale: locale,}}>
+      <MainLayout params={{locale: locale}}>
         {children}
       </MainLayout>
     </>
