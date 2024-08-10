@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev -p 3008",
+    "dev": "next dev -p 3009",
     "build": "next build",
     "start": "next start -p 3100",
     "lint": "next lint",
@@ -22,7 +22,6 @@
     "ahooks": "^3.7.10",
     "antd": "^5.14.0",
     "axios": "^0.24.0",
-    "crypto-js": "^4.2.0",
     "lodash": "^4.17.21",
     "mitt": "^3.0.1",
     "mockjs": "^1.1.0",
