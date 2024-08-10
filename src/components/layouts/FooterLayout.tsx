@@ -3,7 +3,7 @@
 import React, { useState } from 'react';
 import * as Sentry from "@sentry/browser";
 
-import { message } from 'antd';
+// import { message } from 'antd';
 import Image from 'next/image';
 import email1 from '@/../public/e-mail.png';
 import styles from '@/app/shouye.module.css';
@@ -37,41 +37,38 @@ export default function FooterLayout() {
   };
 
   const sendFeedbackToSentry = (contactPerson: string, email: string, contactNumber: string, company:string) => {
-    Sentry.captureMessage('User Feedback', {
-      extra: {
-        contactPerson,
-        email,
-        contactNumber,
-        company,
-      },
-    });
+    const eventId = Sentry.captureMessage("User Feedback");
+    const userFeedback= {
+      name:contactPerson,
+      email: email,
+      message:contactPerson,
+      associatedEventId: eventId,
+      // contactPerson,
+      // email,
+      // contactNumber,
+      // company,
+      // associatedEventId: eventId,
+    }
+    console.log('向Sentry发送反馈:', userFeedback);
+    Sentry.captureFeedback(userFeedback);
   };
   const handleSubmit = () => {
-    console.log('Contact Person:', contactPerson);
-    console.log('Email:', email);
-    console.log('Contact Number:', contactNumber);
-    console.log('Company:', company);
+    // console.log('Contact Person:', contactPerson);
+    // console.log('Email:', email);
+    // console.log('Contact Number:', contactNumber);
+    // console.log('Company:', company);
     if (!contactPerson || !email || !contactNumber || !company) {
-      message.warning('所有字段都必须填写！');
+      alert('请填写完整信息');
       return;
     }
+    console.log('提交反馈...');
     sendFeedbackToSentry(contactPerson, email, contactNumber, company);
-
-    // const eventId = Sentry.captureMessage("User Feedback");
-    // console.log(eventId);
-    
-    // const userFeedback = {
-    //   name:contactPerson,
-    //   email: email,
-    //   message:contactPerson,
-    //   associatedEventId: eventId,
-    // };
-    
-    // Sentry.captureFeedback(userFeedback,{ captureContext: {
-    //   tags: { company: company },
-    // },})
-
-    message.success('已发送成功');
+    try {
+      throw new Error('测试Sentry的模拟错误');
+    } catch (error) {
+      Sentry.captureException(error);
+    }
+    // message.success('已发送成功');
     setContactPerson('');
     setEmail('');
     setContactNumber('');
