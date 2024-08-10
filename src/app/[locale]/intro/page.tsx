@@ -1,5 +1,5 @@
 import React from 'react'
-import { useTranslations } from 'next-intl';
+// import { useTranslations } from 'next-intl';
 
 import Image from 'next/image';
 
@@ -7,7 +7,7 @@ import miao from '@/../public/home/miao.png';
 import styles from '@/app/shouye.module.css';
 
 export default function Page() {
-    const t = useTranslations('home');
+    // const t = useTranslations('home');
     return (
     <div>
         <div className={`${styles['miao_image']}`}>
