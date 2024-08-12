@@ -5,8 +5,6 @@ export const metadata: { title: string } = {
 };
 
 export default function Layout({ children }: Props) {
-
-  // console.log(process.env.NEXT_PUBLIC_MOCK);
   return (
     <html lang="zh">
       <body>

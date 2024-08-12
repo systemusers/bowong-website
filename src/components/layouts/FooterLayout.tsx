@@ -16,6 +16,7 @@ export default function FooterLayout() {
   const [contactNumber, setContactNumber] = useState<string>('');
   const [company, setCompany] = useState('');
   const t = useTranslations('home');
+  const [recordNumber, setRecordNumber] = useState('浙ICP备XXXXXX号-1');
 
   const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = event.target;
@@ -176,7 +177,9 @@ export default function FooterLayout() {
       <div className="footer_text_3_parent">
         <div className={`${styles['footer_text_3']}`}>
           <div>
-            ICP备案号：<a href="http://www.miitbeian.gov.cn" style={{ color: 'rgba(102, 102, 102, 1)' }}>浙ICP备XXXXXX号-1</a>
+            ICP备案号：<a href="http://www.miitbeian.gov.cn" style={{ color: 'rgba(102, 102, 102, 1)' }}>{
+           process.env.NEXT_PUBLIC_RECORDNUMBER?process.env.NEXT_PUBLIC_RECORDNUMBER:recordNumber
+          }</a>
           </div>
         </div>
       </div>

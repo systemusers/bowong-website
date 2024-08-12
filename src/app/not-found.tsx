@@ -1,7 +1,11 @@
+'use client';
 import styles from './shouye.module.css';
 import Image from 'next/image';
 import image from '@/../public/image.png';
+
 export default function NotFound() {
+  // const t = useTranslations('nofound');
+
   return (
     <div
       style={{
@@ -17,10 +21,12 @@ export default function NotFound() {
         <div
           style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '3vw', marginTop: '5vh' }}
         >
-          Page Not Found
+          未找到页面
+          {/* {t('PageNotFound')} */}
         </div>
         <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '1.2vw' }}>
-          We couldnt find the page you requested
+          {/* {t('requested')} */}
+          我们找不到您要求的页面
         </div>
       </div>
     </div>
