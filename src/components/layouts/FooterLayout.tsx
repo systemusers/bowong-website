@@ -56,7 +56,7 @@ export default function FooterLayout() {
       return;
     }
     sendFeedbackToSentry(contactPerson, email, contactNumber, company)
-    // message.success('已发送成功');
+    alert('发送成功');
     setContactPerson('');
     setEmail('');
     setContactNumber('');
