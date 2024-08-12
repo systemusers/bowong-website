@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import * as Sentry from "@sentry/browser";
+import { message } from 'antd';
 
 import Image from 'next/image';
 import email1 from '@/../public/e-mail.png';
@@ -50,11 +51,26 @@ export default function FooterLayout() {
   };
   const handleSubmit = () => {
     if (!contactPerson || !email || !contactNumber || !company) {
-      alert('请填写完整信息');
+      message.info('请填写完整信息');
       return;
     }
+    if(email){
+      if (/^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/.test(email)) {
+        console.log('email sent');
+      } else {
+        message.error('请输入正确的邮箱格式');
+        return;
+      }
+    }
+    if(contactNumber){
+      if (/^[0-9]+$/.test(contactNumber)) {
+      } else {
+        message.error('请输入正确的手机号');
+        return;
+      }
+    }
     sendFeedbackToSentry(contactPerson, email, contactNumber, company)
-    alert('已发送');
+    message.success('已发送');
     setContactPerson('');
     setEmail('');
     setContactNumber('');
