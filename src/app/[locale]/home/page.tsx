@@ -1,7 +1,9 @@
 'use client';
 import styles from '@/app/shouye.module.css';
 import { useTranslations } from 'next-intl';
+
 import Image from 'next/image';
+import mouse from '@/../public/home/mouse.png';
 import miao from '@/../public/home/miao.png';
 import hezuo from '@/../public/home/hezuo.png';
 import left from '@/../public/home/left1.png';
@@ -10,23 +12,31 @@ import centre from '@/../public/home/center1.png';
 import right from '@/../public/home/right1.png';
 import ddbb from '@/../public/home/hua.png';
 import AI_2 from '@/../public/home/AI_2.png';
-import img_v3 from '@/../public/home/img_v3_02dg_55f4d331-df12-4098-939d-4c583b5b57fg.png';
+import img_v3 from '@/../public/home/img_v3_02dm_16a5f9ed-684f-47fb-8f02-ef0b7535781g.png';
 import c4b35 from '@/../public/home/f8764c4b35749fc4167531cdea8ae50b.png';
 import AI_3 from '@/../public/home/17225999047454409255.png';
 import img_v3_02 from '@/../public/home/img_v3_02dj_9dd0a89a-922b-45bf-b469-13a7118c33dg.png';
 export default function Page() {
   const t = useTranslations('home');
-
+  const scrollToSection= ()=>{
+      const targetElement = document.querySelector(`.${styles['group_3']}`);
+      if (targetElement) {
+        targetElement.scrollIntoView({ behavior: 'instant' });
+      }
+  }
   return (
     <div>
       <div className={`${styles['miao_image']}`}>
-          <Image src={miao} priority style={{ width: '100%' }}  alt="" /> 
+          <Image src={miao} priority style={{ width: '100%' }} alt="" /> 
         <div className={`${styles['title']}`}>
-            <div style={{ fontSize: '7.5vw', lineHeight: '7vw' }}>BOWONG</div>
-            <div className={`${styles['title_boder']}`} />
+          <div style={{ fontSize: '7.5vw', lineHeight: '7vw' }}>BOWONG</div>
+          <div className={`${styles['title_boder']}`} />
           <div style={{ marginTop: '3vw', fontSize: '1vw', lineHeight: '2vw', letterSpacing: '0.1vw' }}>
             <div>{t('head1')}</div>
             <div>{t('head2')}</div>
+          </div>
+          <div className='flex justify-center'>
+            <Image src={mouse} style={{ width: '10%' , marginTop: '10vw' }} alt=""  onClick={scrollToSection} ></Image>
           </div>
         </div>
       </div>
@@ -99,7 +109,7 @@ export default function Page() {
                 <div className={`${styles['sext_2']}`} />
               </div>
               <div className={`${styles['flide']} flex`} /* 添加样式类 */>
-                <div>
+                <div className={`${styles['flide_2']}`}>
                  <Image src={img_v3}  style={{ width: '100%' }} alt="" />
                   <span className={`${styles['font_7']}`}>{t('TechnicalName2')}</span>
                 </div>

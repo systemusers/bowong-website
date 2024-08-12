@@ -1357,7 +1357,7 @@
 }
 .title{
   position: absolute; /* 使用绝对定位 */
-  top: 45%; /* 定位到图片的垂直中心 */
+  top: 55%; /* 定位到图片的垂直中心 */
   left: 50%; /* 定位到图片的水平中心 */
   transform: translate(-50%, -50%); /* 修正偏移量 */
   text-align: center; /* 文字居中 */
@@ -1388,4 +1388,7 @@
   height: 0.6vw; /* 色块的高度，可以根据需要调整 */
   border-radius: 0.5vw;
   background: linear-gradient(135deg, rgba(60, 174, 224, 1) 0%, rgba(194, 61, 245, 1) 100%); /* 设置渐变背景 */
+}
+.flide_2{
+  width: 100%;
 }
