@@ -161,13 +161,13 @@ export default function FooterLayout() {
           </div>
         </div>
       </div>
-      {/* <div className="footer_text_3_parent">
+      <div className="footer_text_3_parent">
         <div className={`${styles['footer_text_3']}`}>
           <div>
             ICP备案号：<a href="http://www.miitbeian.gov.cn">浙ICP备XXXXXX号-1</a>
           </div>
         </div>
-      </div> */}
+      </div>
     </div>
   );
 }
