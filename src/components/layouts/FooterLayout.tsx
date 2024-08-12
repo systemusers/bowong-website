@@ -164,7 +164,7 @@ export default function FooterLayout() {
       <div className="footer_text_3_parent">
         <div className={`${styles['footer_text_3']}`}>
           <div>
-            ICP备案号：<a href="http://www.miitbeian.gov.cn">浙ICP备XXXXXX号-1</a>
+            ICP备案号：<a href="http://www.miitbeian.gov.cn" style={{ color: 'rgba(102, 102, 102, 1)' }}>浙ICP备XXXXXX号-1</a>
           </div>
         </div>
       </div>
