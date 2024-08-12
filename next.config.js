@@ -3,21 +3,6 @@
 // const withNextIntl = createNextIntlPlugin();
 
 /** @type {import('next').NextConfig} */
-// 判断环境
-// const isProd = ['production'].includes(process.env.NODE_ENV);
-// // 转发
-// const rewrites = () => {
-//   if (!isProd) {
-//     return [
-//       {
-//         source: '/api/:slug*',
-//         destination: process.env.PROXY,
-//       },
-//     ];
-//   } else {
-//     return [];
-//   }
-// };
 const nextConfig = {
   // rewrites,
   output: 'standalone',  // 打包成单文件
@@ -25,9 +10,6 @@ const nextConfig = {
 };
 
 module.exports = nextConfig;
-
-
-
 
 // Injected content via Sentry wizard below
 
@@ -40,8 +22,8 @@ module.exports = withSentryConfig(
     // https://github.com/getsentry/sentry-webpack-plugin#options
 
     org: "sentry",
-    project: "javascript-nextjs",
-    sentryUrl: "http://122.51.245.126:9000",
+    project: "bowong-website-icp",
+    sentryUrl: "http://122.51.245.126:80",
 
     // Only print logs for uploading source maps in CI
     silent: !process.env.CI,

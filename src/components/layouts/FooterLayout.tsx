@@ -12,7 +12,7 @@ import { useTranslations } from 'next-intl';
 export default function FooterLayout() {
   const [contactPerson, setContactPerson] = useState('');
   const [email, setEmail] = useState('');
-  const [contactNumber, setContactNumber] = useState<string>();
+  const [contactNumber, setContactNumber] = useState<string>('');
   const [company, setCompany] = useState('');
   const t = useTranslations('home');
 
@@ -41,14 +41,12 @@ export default function FooterLayout() {
     const userFeedback= {
       name:contactPerson,
       email: email,
-      message:"",
+      message:contactNumber + company,
       associatedEventId: eventId,
-      tags:{
-        contactNumber:contactNumber,
-        company:company
-      }
     }
-    Sentry.captureFeedback(userFeedback);
+    Sentry.captureFeedback(userFeedback,{
+      includeReplay: true, // optional
+    },);
   };
   const handleSubmit = () => {
     if (!contactPerson || !email || !contactNumber || !company) {
@@ -56,7 +54,7 @@ export default function FooterLayout() {
       return;
     }
     sendFeedbackToSentry(contactPerson, email, contactNumber, company)
-    alert('发送成功');
+    alert('已发送');
     setContactPerson('');
     setEmail('');
     setContactNumber('');
