@@ -39,10 +39,14 @@ export default function FooterLayout() {
   const sendFeedbackToSentry = (contactPerson: string, email: string, contactNumber: string, company:string) => {
     const eventId = Sentry.captureMessage("User Feedback");
     const userFeedback= {
-      name:contactPerson + contactNumber,
+      name:contactPerson,
       email: email,
-      message:company,
+      message:"",
       associatedEventId: eventId,
+      tags:{
+        contactNumber:contactNumber,
+        company:company
+      }
     }
     Sentry.captureFeedback(userFeedback);
   };
