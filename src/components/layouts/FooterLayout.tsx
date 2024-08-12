@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
-import * as Sentry from "@sentry/browser";
+import * as Sentry from '@sentry/browser';
 
 import Image from 'next/image';
 import email1 from '@/../public/e-mail.png';
@@ -36,29 +36,28 @@ export default function FooterLayout() {
     }
   };
 
-  const sendFeedbackToSentry = (contactPerson: string, email: string, contactNumber: string, company:string) => {
-    const eventId = Sentry.captureMessage("User Feedback");
-    const userFeedback= {
-      name:contactPerson + contactNumber,
+  const sendFeedbackToSentry = (contactPerson: string, email: string, contactNumber: string, company: string) => {
+    const eventId = Sentry.captureMessage('User Feedback');
+    const userFeedback = {
+      name: contactPerson,
       email: email,
-      message:contactPerson,
+      message: company,
       associatedEventId: eventId,
-    }
+      tags: {
+        contactNumber: contactNumber,
+        company: company,
+      },
+    };
     console.log('向Sentry发送反馈:', userFeedback);
-    Sentry.captureFeedback(userFeedback);
+    Sentry.captureFeedback(userFeedback, { includeReplay: true });
   };
   const handleSubmit = () => {
-    // console.log('Contact Person:', contactPerson);
-    // console.log('Email:', email);
-    // console.log('Contact Number:', contactNumber);
-    // console.log('Company:', company);
     if (!contactPerson || !email || !contactNumber || !company) {
       alert('请填写完整信息');
       return;
     }
     console.log('提交反馈...');
-    sendFeedbackToSentry(contactPerson, email, contactNumber, company)
-    // message.success('已发送成功');
+    sendFeedbackToSentry(contactPerson, email, contactNumber, company);
     setContactPerson('');
     setEmail('');
     setContactNumber('');
@@ -82,7 +81,7 @@ export default function FooterLayout() {
           </div>
           <div style={{ fontSize: '1vw', color: 'rgba(51, 51, 51, 1)', paddingRight: '5vw' }}>
             <div className="flex justify-items-center">
-             <Image src={email1} alt="" className={`${styles['size-6']}`} />
+              <Image src={email1} alt="" className={`${styles['size-6']}`} />
               &nbsp;&nbsp;<span style={{ fontSize: '1vw' }}>HR@bowong.ai</span>
             </div>
           </div>
@@ -96,7 +95,7 @@ export default function FooterLayout() {
               value={contactPerson}
               onChange={handleInputChange}
               className={`${styles['footer_input']}`}
-              style={{marginRight:'2.5vw'}}
+              style={{ marginRight: '2.5vw' }}
             />
             <input
               type="text"
@@ -115,7 +114,7 @@ export default function FooterLayout() {
               value={contactNumber}
               onChange={handleInputChange}
               className={`${styles['footer_input']}`}
-              style={{marginRight:'2.5vw'}}
+              style={{ marginRight: '2.5vw' }}
             />
             <input
               type="text"
@@ -134,7 +133,7 @@ export default function FooterLayout() {
       <div>
         <div className={`${styles['footer_contact_1']}`}>
           <span>{t('FollowUs')}</span>
-         {/* <Image src="/WeChat.png" alt="" className={`${styles['size-8']}`} />
+          {/* <Image src="/WeChat.png" alt="" className={`${styles['size-8']}`} />
          <Image src="/MicroBlog.png" alt="" className={`${styles['size-8']}`} />
          <Image src="/RedBook.png" alt="" className={`${styles['size-8']}`} />
          <Image src="/Tubing.png" alt="" className={`${styles['size-8']}`} /> */}

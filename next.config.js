@@ -1,4 +1,3 @@
-
 // const createNextIntlPlugin = require('next-intl/plugin');
 // const withNextIntl = createNextIntlPlugin();
 
@@ -26,12 +25,9 @@ const nextConfig = {
 
 module.exports = nextConfig;
 
-
-
-
 // Injected content via Sentry wizard below
 
-const { withSentryConfig } = require("@sentry/nextjs");
+const { withSentryConfig } = require('@sentry/nextjs');
 
 module.exports = withSentryConfig(
   module.exports,
@@ -39,9 +35,8 @@ module.exports = withSentryConfig(
     // For all available options, see:
     // https://github.com/getsentry/sentry-webpack-plugin#options
 
-    org: "sentry",
-    project: "javascript-nextjs",
-    sentryUrl: "http://122.51.245.126:9000",
+    org: 'bowongai',
+    project: 'bowong-website-vercel',
 
     // Only print logs for uploading source maps in CI
     silent: !process.env.CI,
@@ -51,6 +46,11 @@ module.exports = withSentryConfig(
 
     // Upload a larger set of source maps for prettier stack traces (increases build time)
     widenClientFileUpload: true,
+
+    // Automatically annotate React components to show their full name in breadcrumbs and session replay
+    reactComponentAnnotation: {
+      enabled: true,
+    },
 
     // Uncomment to route browser requests to Sentry through a Next.js rewrite to circumvent ad-blockers.
     // This can increase your server load as well as your hosting bill.
@@ -68,6 +68,6 @@ module.exports = withSentryConfig(
     // See the following for more information:
     // https://docs.sentry.io/product/crons/
     // https://vercel.com/docs/cron-jobs
-    automaticVercelMonitors: true,
-  }
+    automaticVercelMonitors: false,
+  },
 );

@@ -1,11 +1,11 @@
 {
-  "name": "react-next-admin",
-  "version": "0.1.0",
+  "name": "bowong-website",
+  "version": "0.2.0",
   "private": true,
   "scripts": {
-    "dev": "next dev -p 3009",
+    "dev": "next dev",
     "build": "next build",
-    "start": "next start -p 3100",
+    "start": "next start",
     "lint": "next lint",
     "prettier": "prettier --write .",
     "prepare": "husky install",
