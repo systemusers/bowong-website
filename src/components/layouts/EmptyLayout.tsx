@@ -8,7 +8,7 @@ import { en } from '@/i18n/en';
 import { zh } from '@/i18n/zh';
 
 export const metadata: { title: string} = {
-  title: '官网',
+  title: '不忘智能科技',
 };
 
 export default function EmptyLayout({ children, params: { locale } }: Props) {

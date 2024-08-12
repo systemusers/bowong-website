@@ -3,7 +3,6 @@ import type { ProSettings } from '@ant-design/pro-components';
 import { staticRouter } from '@/static/staticRouter';
 
 const useDefaultLayoutProps = () => {
-  // eslint-disable-next-line react-hooks/rules-of-hooks
   // 设置
   const settings: ProSettings | undefined = {
     fixedHeader: true,  // 固定侧边栏
@@ -23,22 +22,22 @@ const useDefaultLayoutProps = () => {
           path: staticRouter.home,
           name: 'home',
         },
-        {
-          path: staticRouter.intro,
-          name: 'intro',
-        },
-        {
-          name: 'product',
-          path: staticRouter.product,
-        },
-        {
-          name: 'latestNews',
-          path: staticRouter.latestNews,
-        },
-        {
-          name: 'aboutUs',
-          path: staticRouter.aboutUs,
-        },
+        // {
+        //   path: staticRouter.intro,
+        //   name: 'intro',
+        // },
+        // {
+        //   name: 'product',
+        //   path: staticRouter.product,
+        // },
+        // {
+        //   name: 'latestNews',
+        //   path: staticRouter.latestNews,
+        // },
+        // {
+        //   name: 'aboutUs',
+        //   path: staticRouter.aboutUs,
+        // },
       ],
       
     },

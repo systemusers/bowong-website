@@ -41,22 +41,16 @@ export default function FooterLayout() {
     const userFeedback= {
       name:contactPerson + contactNumber,
       email: email,
-      message:contactPerson,
+      message:company,
       associatedEventId: eventId,
     }
-    console.log('向Sentry发送反馈:', userFeedback);
     Sentry.captureFeedback(userFeedback);
   };
   const handleSubmit = () => {
-    // console.log('Contact Person:', contactPerson);
-    // console.log('Email:', email);
-    // console.log('Contact Number:', contactNumber);
-    // console.log('Company:', company);
     if (!contactPerson || !email || !contactNumber || !company) {
       alert('请填写完整信息');
       return;
     }
-    console.log('提交反馈...');
     sendFeedbackToSentry(contactPerson, email, contactNumber, company)
     // message.success('已发送成功');
     setContactPerson('');
