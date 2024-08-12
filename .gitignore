@@ -2,19 +2,22 @@
 
 # dependencies
 /node_modules
-/.pnp
+.pnp
 .pnp.js
+.yarn
 .yarn/install-state.gz
 
 # testing
 /coverage
 
 # next.js
-/.next/
-/out/
-#lock
+.next/
+.out/
+
+# lock files
 package-lock.json
 yarn.lock
+
 # production
 /build
 
@@ -30,15 +33,15 @@ yarn-error.log*
 # local env files
 .env*.local
 
-# vercel
+# Vercel
 .vercel
 
-# typescript
+# TypeScript
 *.tsbuildinfo
 next-env.d.ts
 
+# IntelliJ IDEA
 .idea
-package-lock.json
 
 # Sentry Config File
 .env.sentry-build-plugin
