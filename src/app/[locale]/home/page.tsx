@@ -29,7 +29,7 @@ export default function Page() {
       <div className={`${styles['miao_image']}`}>
           <Image src={miao} priority style={{ width: '100%' }} alt="" /> 
         <div className={`${styles['title']}`}>
-          <div style={{ fontSize: '7.5vw', lineHeight: '7vw' }}>BOWONG</div>
+          <div style={{ width:'100%', fontSize: '7vw', lineHeight: '7vw',fontWeight: "600", }}>BOWONG</div>
           <div className={`${styles['title_boder']}`} />
           <div style={{ marginTop: '3vw', fontSize: '1vw', lineHeight: '2vw', letterSpacing: '0.1vw' }}>
             <div>{t('head1')}</div>
@@ -161,10 +161,19 @@ export default function Page() {
         <div className={`${styles['titleWhy']}`}>
           <div style={{ fontSize: '2.5vw', lineHeight: '3vw',  marginBottom: '10vw' }}>{t('WhyChooseUs')}</div>
           <div className={`${styles['teamWhy']} flex justify-between`}>
-            <div style={{textAlign:'left'}}><div style={{fontSize: '5vw',  marginBottom: '2vw' }}> {t('num')}</div><div style={{fontSize: '1vw'}}> {t('experience')}</div></div>
-            <div style={{textAlign:'left'}}><div style={{fontSize: '5vw',  marginBottom: '2vw' }}> {t('num1')}</div><div style={{fontSize: '1vw'}}> {t('team')}</div></div>
-            <div style={{textAlign:'left'}}><div style={{fontSize: '5vw',  marginBottom: '2vw' }}> {t('num2')}</div><div style={{fontSize: '1vw'}}> {t('ProjectDelivery')}</div></div>
-            <div style={{textAlign:'left'}}><div style={{fontSize: '5vw',  marginBottom: '2vw' }}> {t('num3')}</div><div style={{fontSize: '1vw'}}> {t('satisfiedCustomer')}</div></div>
+            {/* <div style={{textAlign:'left'}}><div style={{fontSize: '5vw',  marginBottom: '2vw' }}> {t('num')}</div><div style={{fontSize: '1vw'}}> {t('experience')}</div></div> */}
+            <div style={{textAlign:'left'}}>
+              <div className={`${styles['teamWhy_text']}`}> {t('num1')}</div>
+              <div className={`${styles['teamWhy_text1']}`}> {t('team')}</div>
+            </div>
+            <div style={{textAlign:'left'}}>
+              <div className={`${styles['teamWhy_text']}`}> {t('num2')}</div>
+              <div className={`${styles['teamWhy_text1']}`}> {t('ProjectDelivery')}</div>
+            </div>
+            <div style={{textAlign:'left'}}>
+              <div className={`${styles['teamWhy_text']}`}> {t('num3')}</div>
+              <div className={`${styles['teamWhy_text1']}`}> {t('satisfiedCustomer')}</div>
+            </div>
           </div>
         </div>
       </div>

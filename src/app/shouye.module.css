@@ -1,33 +1,29 @@
 @font-face {
   font-family: 'AlibabaPuHuiTiRegular'; /* 替换为您实际使用的字体名称 */
   src: url('/fonts/AlibabaPuHuiTiRegular.ttf') format('TrueType');
-  font-display: optional;  /* 或者使用 'auto', 'swap', 'optional', 'fallback' */
 }
 @font-face {
   font-family: 'PangMenZhengDaoTi'; /* 替换为您实际使用的字体名称 */
   src: url('/fonts/PangMenZhengDaoTi.ttf') format('TrueType');
-  font-display: optional; 
 }
 .text_404 {
   font-family: AlibabaPuHuiTiRegular;
   color: #333333;
-  font-display: optional;  
+      
 }
 .language{
   color:#fff;
   font-family: AlibabaPuHuiTiRegular;
   cursor: pointer;
-  font-display: optional;  /* 或者使用 'auto', 'block', 'optional', 'fallback' */
 }
 .menu{
   font-family: AlibabaPuHuiTiRegular;
-  font-display: optional;
+  
 }
 .text {
   color: #00000033;
   font-size: 1.88vw;
   font-family: AlibabaPuHuiTiRegular;
-  font-display: optional;
   line-height: 1.34vw;
 }
 
@@ -83,7 +79,7 @@
   padding: 0 10%;
   background-color: #fafafa;
   font-family: AlibabaPuHuiTiRegular;
-  font-display: optional;
+  
   color: #333333;
 }
 @media (max-width: 768px) {  
@@ -120,13 +116,13 @@
   color: #00000033;
   font-size: 1.88vw;
   font-family: AlibabaPuHuiTiRegular;
-  font-display: optional;
+  
   line-height: 1.34vw;
 }
 .font {
   font-size: 1vw;
   font-family: AlibabaPuHuiTiRegular;
-  font-display: optional;
+  
   line-height: 0.93vw;
   color: #333333;
 }
@@ -174,7 +170,7 @@
 .font_5 {
   font-size: 2vw;
   font-family: AlibabaPuHuiTiRegular;
-  font-display: optional;
+  
   color: #333333;
   width: 13%;
 }
@@ -184,7 +180,7 @@
   padding-top: 2%;
   font-size: 0.85vw;
   font-family: AlibabaPuHuiTiRegular;
-  font-display: optional;
+  
   color: #333333;
   width: '100%',
 }
@@ -262,7 +258,6 @@
   line-height: 2.5vw;
   font-weight: bold;
   font-family: AlibabaPuHuiTiRegular;  
-  font-display: optional; 
   color: #333333;
 }
 .text_9 {
@@ -294,7 +289,6 @@
 .font_3 {
   font-size: 1.2vw;
   font-family: AlibabaPuHuiTiRegular;
-  font-display: optional; 
   line-height: 1vw;
   color: #333333;
 }
@@ -324,7 +318,6 @@
 .font_7 {
   font-size: 1.2vw;
   font-family: AlibabaPuHuiTiRegular;
-  font-display: optional; 
   color: #333333;
 }
 .text_15 {
@@ -365,7 +358,6 @@
 .font_8 {
   font-size: 3vw;
   font-family: AlibabaPuHuiTiRegular;
-  font-display: optional; 
   line-height: 3vw;
   color: #333333;
 }
@@ -417,12 +409,10 @@
   text-align: center; /* 文本居中 */
   font-size: 1vw;
   font-family: AlibabaPuHuiTiRegular;
-  font-display: optional; 
 }
 .glide_down_text_1 {
   font-size: 1vw;
   font-family: AlibabaPuHuiTiRegular;
-  font-display: optional; 
 }
 .pos_12 {
   position: absolute;
@@ -443,7 +433,6 @@
 .font_6 {
   font-size: 0.8vw;
   font-family: AlibabaPuHuiTiRegular; 
-  font-display: optional; 
   transform: rotate(90deg); 
   /**旋转90度*/
   line-height: 1.5vw;
@@ -456,7 +445,6 @@
 .font_9{
   font-size: 0.8vw;
   font-family: AlibabaPuHuiTiRegular; 
-  font-display: optional; 
   transform: rotate(90deg);
   line-height: 1.5vw;
   color: #333333;
@@ -500,7 +488,6 @@
 .font_10 {
   font-size: 1.46vw;
   font-family: AlibabaPuHuiTiRegular; 
-  font-display: optional; 
 }
 
 .pos_25 {
@@ -760,7 +747,6 @@
 .font_11 {
   font-size: 2.5vw;
   font-family: AlibabaPuHuiTiRegular;
-  font-display: optional; 
   line-height: 3vw;
 }
 .text_21 {
@@ -787,7 +773,6 @@
 .font_12 {
   font-size: 6.25vw;
   font-family: PangMenZhengDao;
-  font-display: optional; 
   line-height: 4.21vw;
   color: #ffffff;
 }
@@ -807,7 +792,6 @@
 .font_13 {
   font-size: 1.5vw;
   font-family: AlibabaPuHuiTiRegular;
-  font-display: optional; 
   line-height: 1.43vw;
   color: #ffffff;
 }
@@ -871,7 +855,6 @@
 .font_14 {
   font-size: 1.5vw;
   font-family: AlibabaPuHuiTiRegular;
-  font-display: optional; 
   line-height: 1.63vw;
   color: #333333;
 }
@@ -882,7 +865,6 @@
 .font_15 {
   font-size: 1vw;
   font-family: AlibabaPuHuiTiRegular;
-  font-display: optional; 
   line-height: 1.5vw;
   color: #666666;
 }
@@ -918,7 +900,6 @@
 .font_16 {
   font-size: 1vw;
   font-family: AlibabaPuHuiTiRegular;
-  font-display: optional; 
   line-height: 1.63vw;
   color: #333333;
 }
@@ -1023,21 +1004,18 @@
 .font_17 {
   font-size: 1vw;
   font-family: AlibabaPuHuiTiRegular;
-  font-display: optional; 
   line-height: 0.81vw;
   color: #666666;
 }
 .font_18 {
   font-size: 1vw;
   font-family: AlibabaPuHuiTiRegular;
-  font-display: optional; 
   line-height: 0.93vw;
   color: #666666;
 }
 .font_19 {
   font-size: 1vw;
   font-family: AlibabaPuHuiTiRegular;
-  font-display: optional; 
   line-height: 1.16vw;
   color: #666666;
 }
@@ -1183,7 +1161,6 @@
 .font_1{
   font-size: 7.5vw;
   font-family: 'PangMenZhengDaoTi';
-  font-display: optional; 
   line-height:3vw;
   color: #333333;
 }
@@ -1191,7 +1168,6 @@
   margin-top: 4.5vw;
   font-size:8vw;
   font-family: 'PangMenZhengDaoTi';  
-  font-display: optional; 
   line-height: 8vw;
   color: #333333;
 }
@@ -1230,7 +1206,6 @@
 .footer_contact{
   font-size: 4vw;
   font-family: AlibabaPuHuiTiRegular;
-  font-display: optional; 
   font-weight: 400;
   line-height: 5vw;  /* 1.5倍行高 */
   color: rgba(18, 23, 26, 1);
@@ -1238,9 +1213,8 @@
 }
 .footer_text{
   flex:1;
-  margin-right: 1%;
+  margin-right: 3%;
   font-family: AlibabaPuHuiTiRegular;
-  font-display: optional; 
 }
 .footer_text_0.2{
   font-weight: 400;
@@ -1252,7 +1226,7 @@
 
 }
 .footer_text1{
-  margin-left: 1%;
+  margin-left: 3%;
   flex:1;
 }
 .size-6 {
@@ -1269,13 +1243,13 @@
 }
 .footer_contact_1{
   font-size: 2vw;
-  margin-top: 6vw;
-  line-height: 4vw;
+  color:#333;
+  margin-top: 3vw;
+  line-height: 5.5vw;
   border-bottom: 1px solid rgba(235, 235, 235, 1);
   display: flex;
   align-items: center;
   font-family: AlibabaPuHuiTiRegular;
-  font-display: optional; 
 }
 .button{
   width:8vw;
@@ -1286,7 +1260,6 @@
   justify-content: center;
   align-items: center;
   font-family: AlibabaPuHuiTiRegular;
-  font-display: optional; 
   color: white;
   font-size: 1vw;
 }
@@ -1297,13 +1270,13 @@
 .footer_input{
   width:18vw;
   height:3vw;
-  margin: 0 1vw 1.5vw 0;
+  margin: 0 0 1.5vw 0;
   background-color: #fafafa;
   font-family: AlibabaPuHuiTiRegular;
-  font-display: optional; 
   border: none; /* 移除所有边框 */
   border-bottom: 1px solid rgba(235, 235, 235, 1); /* 只保留下边框 */
-  font-size: 2vw;
+  font-size: 1vw;
+  color:#333
 }
 
 .footer_input:focus {
@@ -1319,8 +1292,9 @@
   font-size: 1.5vw;
 }
 .footer_text_1{
+  font-size: 1.8vw;
   line-height: 3vw;
-  color: rgba(51, 51, 51, 1);
+  color: #333
 }
 .footer_text_2{
   cursor: pointer;
@@ -1334,7 +1308,6 @@
   color: rgba(102, 102, 102, 1);
   font-size: 0.5vw;
   font-family: AlibabaPuHuiTiRegular;
-  font-display: optional; 
   display: flex;
   align-items: center; /* 垂直居中 */
   justify-content: center; /* 水平居中 */
@@ -1363,7 +1336,7 @@
   text-align: center; /* 文字居中 */
   /* font-size: 0.5vw; */
   font-family: AlibabaPuHuiTiRegular;
-  font-display: optional; 
+  /*   */
   width: 30%;
   color: #333333;
 }
@@ -1375,16 +1348,24 @@
   text-align: center; /* 文字居中 */
   /* font-size: 0.5vw; */
   font-family: AlibabaPuHuiTiRegular;
-  font-display: optional; 
   width: 100%;
   color: #ffffff;
 }
 .teamWhy{
   padding: 0 10%;
 }
+.teamWhy_text{
+  font-family: PangMenZhengDaoTi;
+  font-size: 5vw;
+  margin-top: 1.5vw;
+}
+.teamWhy_text1{
+  font-family: AlibabaPuHuiTiRegular;
+  font-size: 1vw;
+}
 .title_boder{
   margin-left: 0.5vw;
-  width: 55%; /* 色块的宽度 */
+  width: 50%; /* 色块的宽度 */
   height: 0.6vw; /* 色块的高度，可以根据需要调整 */
   border-radius: 0.5vw;
   background: linear-gradient(135deg, rgba(60, 174, 224, 1) 0%, rgba(194, 61, 245, 1) 100%); /* 设置渐变背景 */

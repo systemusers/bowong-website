@@ -88,7 +88,7 @@ export default function FooterLayout() {
           </div>
         </div>
         <div className={`${styles['footer_text1']}`}>
-          <div className="flex justify-between">
+          <div className="flex">
             <input
               type="text"
               placeholder="Contact Person"
@@ -96,6 +96,7 @@ export default function FooterLayout() {
               value={contactPerson}
               onChange={handleInputChange}
               className={`${styles['footer_input']}`}
+              style={{marginRight:'2.5vw'}}
             />
             <input
               type="text"
@@ -106,7 +107,7 @@ export default function FooterLayout() {
               className={`${styles['footer_input']}`}
             />
           </div>
-          <div className="flex justify-between">
+          <div className="flex">
             <input
               type="text"
               placeholder="Contact Number"
@@ -114,6 +115,7 @@ export default function FooterLayout() {
               value={contactNumber}
               onChange={handleInputChange}
               className={`${styles['footer_input']}`}
+              style={{marginRight:'2.5vw'}}
             />
             <input
               type="text"
