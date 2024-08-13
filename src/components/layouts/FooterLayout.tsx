@@ -175,14 +175,14 @@ export default function FooterLayout() {
         </div>
       </div>
       <div className="footer_text_3_parent">
-        <div className={`${styles['footer_text_3']}`}>
-          // todo : github 去掉ICP
-          <div>
-            ICP备案号：<a href="http://www.miitbeian.gov.cn" style={{ color: 'rgba(102, 102, 102, 1)' }}>{
-           process.env.NEXT_PUBLIC_RECORDNUMBER?process.env.NEXT_PUBLIC_RECORDNUMBER:recordNumber
-          }</a>
-          </div>
-        </div>
+        {/*<div className={`${styles['footer_text_3']}`}>*/}
+        {/*  // todo : github 去掉ICP*/}
+        {/*  <div>*/}
+        {/*    ICP备案号：<a href="http://www.miitbeian.gov.cn" style={{ color: 'rgba(102, 102, 102, 1)' }}>{*/}
+        {/*   process.env.NEXT_PUBLIC_RECORDNUMBER?process.env.NEXT_PUBLIC_RECORDNUMBER:recordNumber*/}
+        {/*  }</a>*/}
+        {/*  </div>*/}
+        {/*</div>*/}
       </div>
     </div>
   );
