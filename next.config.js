@@ -21,15 +21,20 @@ module.exports = withSentryConfig(
     // For all available options, see:
     // https://github.com/getsentry/sentry-webpack-plugin#options
 
-    org: "sentry",
-    project: "bowong-website-icp",
-    sentryUrl: "http://122.51.245.126:80",
+    org: "bowongai",
+    project: "bowong-website-vercel",
+    // sentryUrl: "http://122.51.245.126:80",
 
     // Only print logs for uploading source maps in CI
     silent: !process.env.CI,
 
     // For all available options, see:
     // https://docs.sentry.io/platforms/javascript/guides/nextjs/manual-setup/
+
+    // Automatically annotate React components to show their full name in breadcrumbs and session replay
+    reactComponentAnnotation: {
+      enabled: true,
+    },
 
     // Upload a larger set of source maps for prettier stack traces (increases build time)
     widenClientFileUpload: true,
